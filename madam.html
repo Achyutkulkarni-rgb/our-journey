@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY & SLIDE */
+body {
+    background: #f5f5f5;
+}
+
+.slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    animation: bgMove 10s ease infinite;
+    background: linear-gradient(120deg,#ff9a9e,#fad0c4,#a18cd1,#fbc2eb);
+    background-size: 300% 300%;
+}
+.slide.active {
+    display: flex;
+}
+@keyframes bgMove {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+/* GLASS BOX */
+.box {
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    margin-top: 20px;
+}
+h2 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.shayari {
+    margin-top: 10px;
+    font-style: italic;
+    color: #5e35b1;
+    font-size: 0.95rem;
+}
+
+/* BUTTONS */
+.btns {
+    margin-top: 15px;
+}
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 25px;
+    background: #6a1b9a;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+}
+button:hover {
+    background: #4a148c;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="agar.mp3" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+    <div class="box">
+        <h2>Hey 🤍</h2>
+        <p>Take a little time to read this.<br>This is our emotional journey.</p>
+        <p class="shayari">
+            "Kuch rishte shabdon se nahi,<br>Khamoshi se bhi bayan ho jate hai."
+        </p>
+        <div class="btns">
+            <button id="musicBtn" onclick="toggleMusic()">▶ Play Music</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+    <div class="box">
+        <h2>Our Journey 🌸</h2>
+        <p>We laughed. We fought.<br>We laughed again.</p>
+        <p class="shayari">
+            "Ladai bhi ki, hasi bhi aayi,<br>Yahi to dosti ki sachai."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+    <div class="box">
+        <h2>Together 💪</h2>
+        <p>Working together.<br>Growing side by side.</p>
+        <p class="shayari">
+            "Saath chalna hi nahi,<br>Saath sambhalna bhi dosti hai."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+    <div class="box">
+        <h2>Bangalore Dreams ✨</h2>
+        <p>Dreams in eyes.<br>Hope in hearts.</p>
+        <p class="shayari">
+            "Khwaab bade the, raste naye,<br>Par saath hone se dar nahi laga."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+    <div class="box">
+        <h2>Best Days 💖</h2>
+        <p>Fun moments.<br>Carefree smiles.</p>
+        <p class="shayari">
+            "Wo din aaj bhi dil me hai,<br>Jaha wajah sirf muskaan thi."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+    <div class="box">
+        <h2>A Promise 🤞</h2>
+        <p>I’ll stand with you.<br>In every situation.</p>
+        <p class="shayari">
+            "Vaada hai saath nibhane ka,<br>Chahe haalaat jaise bhi ho."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide">
+    <div class="box">
+        <h2>More Than Photos 📸</h2>
+        <p>Photos don’t define bonds.<br>Memories do.</p>
+        <p class="shayari">
+            "Photo kam ho to kya,<br>Yaadein aaj bhi zinda hai."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- FINAL SLIDE -->
+<div class="slide">
+    <div class="box">
+        <h2>Just Be With Me 🤍</h2>
+        <p>Just hold my hand again,<br>like before.</p>
+        <p class="shayari">
+            "Haath thaam lo bas ek baar,<br>Baki zindagi khud raasta bana legi."
+        </p>
+        <div class="btns">
+            <button onclick="prev()">Back</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function next() {
+    slides[index].classList.remove('active');
+    index = Math.min(index + 1, slides.length - 1);
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = Math.max(index - 1, 0);
+    slides[index].classList.add('active');
+}
+
+function toggleMusic() {
+    let music = document.getElementById("bgMusic");
+    let btn = document.getElementById("musicBtn");
+    if (music.paused) {
+        music.play().catch(()=>{});
+        btn.innerText = "⏸ Pause Music";
+    } else {
+        music.pause();
+        btn.innerText = "▶ Play Music";
+    }
+}
+</script>
+
+</body>
+</html>
